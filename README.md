@@ -2,6 +2,8 @@
 
 **Content-aware, device-adaptive image optimizer for Vite + React.**
 
+Built by [@ezitounioussama](https://github.com/ezitounioussama) — [gotodev.ma](https://gotodev.ma)
+
 Surpasses `next/image` in perceptual quality at equal or smaller file sizes. Works with any Vite project, not locked to any framework.
 
 [![npm version](https://img.shields.io/npm/v/vite-image-react.svg)](https://www.npmjs.com/package/vite-image-react)
@@ -160,4 +162,4 @@ interface GImageProps {
 
 ## License
 
-MIT
+MIT — built with care by [@ezitounioussama](https://github.com/ezitounioussama) · [gotodev.ma](https://gotodev.ma)

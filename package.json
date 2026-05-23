@@ -1,7 +1,7 @@
 {
   "name": "vite-image-react",
-  "version": "0.2.2",
-  "description": "Content-aware, device-adaptive image optimizer for React + Vite. Auto-converts to AVIF/WebP/JPEG with SSIM auto-tune, face detection, SVGO, and device-tier delivery.",
+  "version": "0.2.3",
+  "description": "Content-aware, device-adaptive image optimizer for React + Vite. Auto-converts to AVIF/WebP/JPEG with SSIM auto-tune, face detection, SVGO, and device-tier delivery. Built by @ezitounioussama at gotodev.ma.",
   "keywords": [
     "image",
     "optimizer",
@@ -65,6 +65,7 @@
     "test:watch": "vitest",
     "prepare": "echo 'ready'"
   },
+  "author": "Oussama Ezitouni <ezitounioussama@gmail.com> (https://gotodev.ma)",
   "sideEffects": false,
   "$schema": "https://raw.githubusercontent.com/vitejs/vite-plugin-registry/refs/heads/main/data/schema/extended-package-json.schema.json",
   "compatiblePackages": {
