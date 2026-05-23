@@ -1,7 +1,43 @@
 {
   "name": "vite-image-react",
   "version": "0.2.0",
-  "description": "Content-aware, device-adaptive image optimizer for React + Vite projects",
+  "description": "Content-aware, device-adaptive image optimizer for React + Vite. Auto-converts to AVIF/WebP/JPEG with SSIM auto-tune, face detection, SVGO, and device-tier delivery.",
+  "keywords": [
+    "image",
+    "optimizer",
+    "optimization",
+    "compression",
+    "vite",
+    "vite-plugin",
+    "react",
+    "react-component",
+    "image-optimization",
+    "image-compression",
+    "webp",
+    "avif",
+    "jpeg",
+    "png",
+    "svg",
+    "svgo",
+    "sharp",
+    "responsive-images",
+    "lazy-loading",
+    "blur-up",
+    "placeholder",
+    "ssim",
+    "content-aware",
+    "perceptual",
+    "saliency",
+    "face-detection",
+    "device-adaptive",
+    "performance",
+    "core-web-vitals",
+    "lcp",
+    "cls",
+    "image-loader",
+    "picture",
+    "srcset"
+  ],
   "type": "module",
   "exports": {
     ".": {
@@ -29,10 +65,15 @@
     "test:watch": "vitest",
     "prepare": "echo 'ready'"
   },
+  "sideEffects": false,
   "license": "MIT",
+  "homepage": "https://github.com/ezitounioussama/vite-image-react#readme",
+  "bugs": {
+    "url": "https://github.com/ezitounioussama/vite-image-react/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ezitounioussama/vite-image-react.git"
+    "url": "git+https://github.com/ezitounioussama/vite-image-react.git"
   },
   "engines": {
     "node": ">=22"
