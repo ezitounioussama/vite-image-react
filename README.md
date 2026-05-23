@@ -9,7 +9,7 @@ Surpasses `next/image` in perceptual quality at equal or smaller file sizes. Wor
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/vite-image-react)](https://bundlephobia.com/package/vite-image-react)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen)](https://nodejs.org)
-[![Vite](https://img.shields.io/badge/vite-%3E%3D7-blueviolet)](https://vitejs.dev)
+[![Vite compatibility](https://registry.vite.dev/api/badges?package=vite-image-react&tool=vite)](https://registry.vite.dev/plugins)
 [![React](https://img.shields.io/badge/react-%3E%3D19-blue)](https://react.dev)
 [![GitHub stars](https://img.shields.io/github/stars/ezitounioussama/vite-image-react)](https://github.com/ezitounioussama/vite-image-react)
 

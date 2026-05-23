@@ -66,6 +66,14 @@
     "prepare": "echo 'ready'"
   },
   "sideEffects": false,
+  "$schema": "https://raw.githubusercontent.com/vitejs/vite-plugin-registry/refs/heads/main/data/schema/extended-package-json.schema.json",
+  "compatiblePackages": {
+    "schemaVersion": 1,
+    "vite": {
+      "type": "compatible",
+      "versions": "^7.0.0 || ^8.0.0"
+    }
+  },
   "license": "MIT",
   "homepage": "https://github.com/ezitounioussama/vite-image-react#readme",
   "bugs": {
