@@ -1,6 +1,6 @@
 {
   "name": "vite-image-react",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Content-aware, device-adaptive image optimizer for React + Vite. Auto-converts to AVIF/WebP/JPEG with SSIM auto-tune, face detection, SVGO, and device-tier delivery. Built by @ezitounioussama at gotodev.ma.",
   "keywords": [
     "image",
@@ -99,11 +99,11 @@
   "size-limit": [
     {
       "path": "dist/index.js",
-      "limit": "30 KB"
+      "limit": "5 KB"
     },
     {
       "path": "dist/vite-plugin.js",
-      "limit": "30 KB"
+      "limit": "12 KB"
     }
   ],
   "devDependencies": {

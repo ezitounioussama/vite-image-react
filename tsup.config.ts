@@ -10,4 +10,7 @@ export default defineConfig({
   clean: true,
   external: ['sharp', 'react', 'vite'],
   splitting: true,
+  minify: true,
+  keepNames: false,
+  target: 'esnext',
 })
