@@ -10,7 +10,7 @@ Surpasses `next/image` in perceptual quality at equal or smaller file sizes. Wor
 [![npm downloads](https://img.shields.io/npm/dw/vite-image-react)](https://www.npmjs.com/package/vite-image-react)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/vite-image-react)](https://bundlephobia.com/package/vite-image-react)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen)](https://nodejs.org)
+[![Node](https://img.shields.io/badge/node-%3E%3D18.17-brightgreen)](https://nodejs.org)
 [![Vite compatibility](https://registry.vite.dev/api/badges?package=vite-image-react&tool=vite)](https://registry.vite.dev/plugins)
 [![React](https://img.shields.io/badge/react-%3E%3D19-blue)](https://react.dev)
 [![GitHub stars](https://img.shields.io/github/stars/ezitounioussama/vite-image-react)](https://github.com/ezitounioussama/vite-image-react)
@@ -129,6 +129,20 @@ function Page() {
 }
 ```
 
+### Public directory images
+
+Images placed in your project's `public/` directory are automatically scanned and optimized during build. No import needed:
+
+```
+public/
+├── logo.png          ← optimized to dist/logo.png
+├── og-image.jpg      ← optimized to dist/og-image.jpg
+└── images/
+    └── banner.webp   ← optimized to dist/images/banner.webp
+```
+
+Public images use the same compression pipeline (AVIF/WebP/JPEG encoding, SSIM auto-tune, saliency preprocessing) with the `high` quality tier defaults. Since they aren't directly imported, they get optimized on-disk in `dist/` under their original paths.
+
 All standard `<img>` props work: `className`, `style`, `onLoad`, `onError`, `loading`, etc.
 
 ---
@@ -189,7 +203,7 @@ interface GImageProps {
 
 ## Requirements
 
-- Node.js >= 22
+- Node.js >= 18.17
 - Vite >= 7
 - React >= 19
 
