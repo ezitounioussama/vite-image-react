@@ -43,7 +43,6 @@ export interface ImageMetadata {
   placeholder: string
   variants: ImageVariant[]
   tiers: Record<QualityTier, string>
-  blurHash?: string
 }
 
 export interface TileAnalysis {

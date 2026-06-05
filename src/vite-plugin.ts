@@ -4,7 +4,7 @@ import type { Plugin, ResolvedConfig } from 'vite'
 import { encodeImage } from './core/encoder.ts'
 import { addToManifest, createManifest, writeManifest } from './core/manifest.ts'
 import { downloadRemoteImage, isRemoteUrl } from './core/remote.ts'
-import type { PluginOptions, QualityTier, TierConfig } from './core/types.ts'
+import type { BuildManifest, PluginOptions, QualityTier, TierConfig } from './core/types.ts'
 
 const IMAGE_EXTENSIONS = /\.(jpe?g|png|webp|avif|gif|svg|bmp|tiff?|ico)$/i
 
@@ -19,7 +19,13 @@ export default function viteImageReact(userOptions: PluginOptions = {}): Plugin 
   let config: ResolvedConfig
   let manifest = createManifest()
   const options: PluginOptions = {
-    tiers: { ...DEFAULT_TIERS, ...userOptions.tiers },
+    tiers: {
+      ultra: { ...DEFAULT_TIERS.ultra, ...userOptions.tiers?.ultra },
+      high: { ...DEFAULT_TIERS.high, ...userOptions.tiers?.high },
+      medium: { ...DEFAULT_TIERS.medium, ...userOptions.tiers?.medium },
+      low: { ...DEFAULT_TIERS.low, ...userOptions.tiers?.low },
+    },
+    widths: userOptions.widths,
     adaptive: userOptions.adaptive ?? true,
     autoTune: userOptions.autoTune ?? true,
     preprocess: userOptions.preprocess ?? true,
@@ -43,7 +49,7 @@ export default function viteImageReact(userOptions: PluginOptions = {}): Plugin 
 
       const publicDir = config.publicDir
       if (publicDir && existsSync(publicDir)) {
-        await processPublicDir(publicDir, options, config)
+        await processPublicDir(publicDir, options, config, manifest)
       }
     },
 
@@ -83,9 +89,11 @@ export default function viteImageReact(userOptions: PluginOptions = {}): Plugin 
         }
       }
 
+      const widths = options.widths ?? tiers.high.widths
+
       try {
         const entry = await encodeImage(imagePath, {
-          widths: tiers.high.widths,
+          widths,
           formats: [...formats],
           tiers,
           autoTune: options.autoTune ?? true,
@@ -164,6 +172,7 @@ async function processPublicDir(
   publicDir: string,
   options: PluginOptions,
   config: ResolvedConfig,
+  manifest: BuildManifest,
 ): Promise<void> {
   const images = scanImages(publicDir)
   if (images.length === 0) return
@@ -180,8 +189,10 @@ async function processPublicDir(
         mkdirSync(imageOutDir, { recursive: true })
       }
 
-      await encodeImage(imagePath, {
-        widths: tiers.high?.widths ?? [480, 768, 1024, 1920],
+      const widths = options.widths ?? tiers.high?.widths ?? [480, 768, 1024, 1920]
+
+      const entry = await encodeImage(imagePath, {
+        widths,
         formats: [...formats],
         tiers,
         autoTune: options.autoTune ?? true,
@@ -191,6 +202,8 @@ async function processPublicDir(
         outDir: imageOutDir,
         verbose: options.verbose,
       })
+
+      addToManifest(manifest, relPath, entry)
 
       if (options.verbose) {
         console.log(`[vite-image-react] Optimized public: ${relPath}`)

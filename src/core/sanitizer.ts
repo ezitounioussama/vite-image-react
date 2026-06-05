@@ -42,7 +42,11 @@ export function sanitizeSvg(input: string): string {
     if (result.data) {
       sanitized = result.data
     }
-  } catch {}
+  } catch (error) {
+    console.warn(
+      `[vite-image-react] SVGO optimization failed: ${error instanceof Error ? error.message : error}`,
+    )
+  }
 
   return sanitized
 }
