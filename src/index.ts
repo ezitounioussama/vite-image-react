@@ -11,3 +11,5 @@ export type {
   QualityTier,
   RemoteOptions,
 } from './core/types.ts'
+export { default as withViteImageReact } from './next-plugin.ts'
+export { default as viteImageReact } from './vite-plugin.ts'

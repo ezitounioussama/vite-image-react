@@ -80,6 +80,32 @@ export default defineConfig({
 })
 ```
 
+### Next.js plugin
+
+```ts
+// next.config.mjs
+import { withViteImageReact } from 'vite-image-react/next-plugin'
+
+export default withViteImageReact({
+  // your Next.js config here
+}, {
+  // optional: plugin options
+  remote: { domains: ['images.unsplash.com'] },
+})
+```
+
+Then `import GImage from 'vite-image-react'` in your components. Works in both App Router and Pages Router.
+
+```tsx
+'use client'
+import GImage from 'vite-image-react'
+import hero from './hero.jpg'
+
+export default function Page() {
+  return <GImage src={hero} alt="Hero" priority />
+}
+```
+
 ### React component
 
 ```tsx
@@ -204,8 +230,9 @@ interface GImageProps {
 ## Requirements
 
 - Node.js >= 18.17
-- Vite >= 7
 - React >= 19
+- Vite >= 7 _(optional — only for Vite plugin)_
+- Next.js >= 13 _(optional — only for Next.js plugin)_
 
 ---
 

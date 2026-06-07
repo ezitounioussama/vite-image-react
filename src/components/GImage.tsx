@@ -1,3 +1,4 @@
+'use client'
 import { type ImgHTMLAttributes, useCallback, useEffect, useRef, useState } from 'react'
 import { getDeviceFingerprint, listenForChanges } from '../adaptive/fingerprint.ts'
 import { PredictiveLoader } from '../adaptive/predictive.ts'

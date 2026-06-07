@@ -1,7 +1,7 @@
 {
   "name": "vite-image-react",
-  "version": "0.2.7",
-  "description": "Content-aware, device-adaptive image optimizer for React + Vite. Auto-converts to AVIF/WebP/JPEG with SSIM auto-tune, face detection, SVGO, and device-tier delivery. Built by @ezitounioussama at gotodev.ma.",
+  "version": "1.0.0",
+  "description": "Content-aware, device-adaptive image optimizer for React. Works with Vite and Next.js. Auto-converts to AVIF/WebP/JPEG with SSIM auto-tune, face detection, SVGO, and device-tier delivery. Built by @ezitounioussama at gotodev.ma.",
   "keywords": [
     "image",
     "optimizer",
@@ -9,6 +9,8 @@
     "compression",
     "vite",
     "vite-plugin",
+    "nextjs",
+    "next-plugin",
     "react",
     "react-component",
     "image-optimization",
@@ -48,6 +50,10 @@
     "./vite-plugin": {
       "types": "./dist/vite-plugin.d.ts",
       "default": "./dist/vite-plugin.js"
+    },
+    "./next-plugin": {
+      "types": "./dist/next-plugin.d.ts",
+      "default": "./dist/next-plugin.js"
     }
   },
   "types": "./dist/index.d.ts",
@@ -100,6 +106,11 @@
     "react": "^19.0.0",
     "vite": "^7.0.0"
   },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": true
+    }
+  },
   "size-limit": [
     {
       "path": "dist/index.js",
@@ -107,6 +118,14 @@
     },
     {
       "path": "dist/vite-plugin.js",
+      "limit": "5 KB"
+    },
+    {
+      "path": "dist/next-plugin.js",
+      "limit": "5 KB"
+    },
+    {
+      "path": "dist/next-image-loader.cjs",
       "limit": "12 KB"
     }
   ],
