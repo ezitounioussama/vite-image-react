@@ -1,6 +1,6 @@
 {
   "name": "vite-image-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Content-aware, device-adaptive image optimizer for React. Works with Vite and Next.js. Auto-converts to AVIF/WebP/JPEG with SSIM auto-tune, face detection, SVGO, and device-tier delivery. Built by @ezitounioussama at gotodev.ma.",
   "keywords": [
     "image",

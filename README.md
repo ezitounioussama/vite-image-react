@@ -1,10 +1,10 @@
 # vite-image-react
 
-**Content-aware, device-adaptive image optimizer for Vite + React.**
+**Content-aware, device-adaptive image optimizer for React. Works with Vite and Next.js.**
 
 Built by [@ezitounioussama](https://github.com/ezitounioussama) — [gotodev.ma](https://gotodev.ma)
 
-Surpasses `next/image` in perceptual quality at equal or smaller file sizes. Works with any Vite project, not locked to any framework.
+Surpasses `next/image` in perceptual quality at equal or smaller file sizes. Framework-agnostic — use it with Vite, Next.js, or any React build pipeline.
 
 [![npm version](https://img.shields.io/npm/v/vite-image-react.svg)](https://www.npmjs.com/package/vite-image-react)
 [![npm downloads](https://img.shields.io/npm/dw/vite-image-react)](https://www.npmjs.com/package/vite-image-react)
@@ -19,7 +19,7 @@ Surpasses `next/image` in perceptual quality at equal or smaller file sizes. Wor
 
 ## How it works
 
-### Build time (Vite plugin)
+### Build time (Vite or Next.js)
 
 Every image is divided into 64×64 tiles and analyzed:
 
@@ -58,6 +58,10 @@ Every image is divided into 64×64 tiles and analyzed:
 
 ```bash
 npm install vite-image-react
+# or
+pnpm add vite-image-react
+# or
+bun add vite-image-react
 ```
 
 ---
@@ -212,7 +216,7 @@ interface GImageProps {
 
 ---
 
-## Comparison: next/image vs vite-image-react
+## Comparison: Built-in next/image vs vite-image-react
 
 | Aspect | next/image | vite-image-react |
 |---|---|---|
