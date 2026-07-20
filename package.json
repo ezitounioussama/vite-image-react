@@ -132,7 +132,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.4.15",
     "@size-limit/file": "^12.1.0",
-    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/jest-dom": "^7.0.0",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",
     "@vitejs/plugin-react": "^6.0.2",
@@ -141,7 +141,7 @@
     "react-dom": "^19.2.6",
     "size-limit": "^12.1.0",
     "tsup": "^8.5.1",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "vite": "^8.0.13",
     "vitest": "^4.1.6"
   }
