@@ -131,7 +131,7 @@
   ],
   "devDependencies": {
     "@biomejs/biome": "^2.4.15",
-    "@size-limit/file": "^12.1.0",
+    "@size-limit/file": "^13.0.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.14",
@@ -139,7 +139,7 @@
     "happy-dom": "^20.9.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "size-limit": "^12.1.0",
+    "size-limit": "^13.0.1",
     "tsup": "^8.5.1",
     "typescript": "^6.0.3",
     "vite": "^8.0.13",
